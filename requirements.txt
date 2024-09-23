@@ -1,0 +1,7 @@
+python-dotenv
+flask
+
+requests
+streamlit
+beautifulsoup4
+langchain
