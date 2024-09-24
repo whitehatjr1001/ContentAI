@@ -12,6 +12,13 @@ Content AI is a Large Language Model (LLM) application designed to provide users
 
 ## Process Overview
 
+## Demo
+
+
+
+https://github.com/user-attachments/assets/3be1095a-c91b-4667-aeec-184c1f0603e2
+
+
 1. **User Input via Streamlit Interface**:
    - Users enter their queries in a simple and engaging Streamlit-based front end.
 
