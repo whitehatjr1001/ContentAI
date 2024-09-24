@@ -4,6 +4,8 @@
 
 Content AI is a Large Language Model (LLM) application designed to provide users with contextual answers based on web content. By leveraging the Serper API, the application searches the web to gather relevant information, which is then processed and presented to users through an intuitive interface. The project comprises a Flask API as the backend service and a Streamlit-based frontend for user interaction.
 
+You can clone and deploy this application with changes on any cloud service
+
 ## Key Features
 
 - **Web-Powered Responses**: Utilizes the Serper API to fetch and scrape content from the internet.
