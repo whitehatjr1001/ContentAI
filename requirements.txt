@@ -4,9 +4,4 @@ google-generativeai
 requests
 streamlit
 beautifulsoup4
-langchain
 flask_swagger_ui
-langchain-google-vertexai 
-langchain 
-firebase-admin
-langchain_community
