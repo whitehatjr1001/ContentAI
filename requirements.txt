@@ -1,7 +1,9 @@
 python-dotenv
 flask
-
+google-generativeai
 requests
 streamlit
 beautifulsoup4
 langchain
+flask_swagger_ui
+
