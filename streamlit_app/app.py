@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Title for the conversational bot
-st.title("  ----Content AI----")
+st.title(" Content AI")
 
 # Initialize the session state to maintain message history
 def initialize_session_state():

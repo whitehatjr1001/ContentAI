@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 SERPER_API_KEY = os.getenv("SERP_API_KEY")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=GOOGLE_API_KEY)
 
 def search_articles(query):
     """ 
@@ -104,8 +105,8 @@ def get_system_prompt(content):
     - Long answer 
     - Accurate
 
-    Use the information from the articles to answer the user's query effectively. 
-    Dont quoate the articals
+    Use the information from the articles to answer the user's query effectively.
+    And dont deny answers use the articles in the best possible way to give the answer 
     """
 
     
@@ -142,41 +143,3 @@ def generate_answer(content, query):
     response = chat_session.send_message(query)
     return response.text
 
-def test_pipeline(query):
-    """
-    Tests the entire pipeline: searching for articles, fetching content,
-    concatenating the content, and generating an answer.
-    """
-    print(f"Testing pipeline with query: '{query}'")
-    
-    # Step 1: Search for articles
-    articles = search_articles(query)
-    if not articles:
-        print("No articles found.")
-        return
-    
-    print(f"Found {len(articles)} articles.")
-    
-    # Step 2: Limit to top 3 articles and fetch their content
-    top_articles = articles[:3]
-    print(f"Limiting to top {len(top_articles)} articles. Fetching content...")
-    
-    # Step 3: Concatenate content from the top articles
-    concatenated_content = concatenate_content(top_articles)
-    if not concatenated_content.strip():
-        print("No content retrieved from articles.")
-        return
-    
-    print("Content fetched and concatenated successfully.")
-    print(concatenated_content)
-    
-    # Step 4: Generate an answer based on the concatenated content
-    answer = generate_answer(concatenated_content, query)
-    
-    print("Generated answer:")
-    print(answer)
-
-# Example usage
-if __name__ == "__main__":
-    test_query = "Top 10 K-pop Muscisians"
-    test_pipeline(test_query)
