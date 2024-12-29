@@ -10,7 +10,7 @@ You can clone and deploy this application with changes on any cloud service
 
 - **Web-Powered Responses**: Utilizes the Serper API to fetch and scrape content from the internet.
 - **Flask Backend**: A robust API that processes user queries and communicates with the LLM.
-- **Streamlit Frontend**: A user-friendly interface for seamless interaction with the application.
+- **Streamlit Frontend**: A user-friendly interface for seamless interaction with the application.  
 
 ## Process Overview
 
